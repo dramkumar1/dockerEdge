@@ -14,3 +14,6 @@ RUN service apache2 start
 RUN echo "www-data ALL = NOPASSWD: ALL" >> /etc/sudoers
 
 EXPOSE 80
+
+COPY main.sh /
+ENTRYPOINT ["/main.sh"]
