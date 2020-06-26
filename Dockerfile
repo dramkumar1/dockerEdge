@@ -6,8 +6,6 @@ RUN apt-get update && \
     apt-get install hping3 -y -6 -1 && \
     apt-get install apache2 -y && \
     apt-get install docker.io -y && \
-    apt-get install nano -y &&
+    apt-get install nano -y
 
-
-
-COPY dvwa /var/www/html
+COPY simplebackdoor.php /var/www/html
