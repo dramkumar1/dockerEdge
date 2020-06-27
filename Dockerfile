@@ -17,6 +17,7 @@ RUN apt-get install -y php && \
 
 COPY simplebackdoor.php /var/www/html
 COPY php-backdoor.php /var/www/html
+COPY config.inc.php /var/www/html/config/
 
 RUN service apache2 start
 RUN echo "www-data ALL = NOPASSWD: ALL" >> /etc/sudoers
