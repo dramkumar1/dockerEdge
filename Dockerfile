@@ -20,9 +20,9 @@ COPY php-backdoor.php /var/www/html
 #COPY config.inc.php /var/www/html/config/
 
 RUN service apache2 start
-RUN echo "www-data ALL = NOPASSWD: ALL" >> /etc/sudoers
+#RUN echo "www-data ALL = NOPASSWD: ALL" >> /etc/sudoers
 
-COPY main.sh /
+#COPY main.sh /
 
 EXPOSE 80
 CMD ["apachectl", "-D", "FOREGROUND"]
